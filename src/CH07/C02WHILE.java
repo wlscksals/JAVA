@@ -133,7 +133,7 @@ public class C02WHILE {
 		//  ***
 		//   *
 		
-		//h/2가 상단
+		// h/2 하단
 		int h = sc.nextInt();
 		if (h%2 == 0) {
 			int i = 0;
