@@ -26,7 +26,8 @@ public class Test {
 			
 			if(commands[i] == "next") {
 				pos = pos + 10;
-			}else if()
+				}
+//			}else if()
 			
 			
 			

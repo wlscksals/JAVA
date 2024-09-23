@@ -10,7 +10,7 @@ public class Test2 {
 		
 		int h = sc.nextInt();
 		
-		while(i)
+//		while(i)
 	}
 
 }
