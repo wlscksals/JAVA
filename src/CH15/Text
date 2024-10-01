@@ -1,0 +1,14 @@
+객체 지향 문법 정리
+1 객체 일반
+	- 객체란/ 객체구조 / 객체지향언어 / 클래스란/ 메소드
+	- 함수 오버로딩 / 생성자 오버로딩
+	- 정보 은닉(private / getter and setter)/ 캡슐화
+	- 배열(primitive/ reference)
+	- static
+
+2 상속
+	- 상속 일반 상속사용이유 상속기본코드(extends)
+	- 오버라이딩(vs 오버로딩)
+	- up/down casting
+	- 추상클래스
+	- 인터페이스
