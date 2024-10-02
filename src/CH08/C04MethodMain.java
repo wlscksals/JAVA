@@ -2,6 +2,7 @@ package CH08;
 
 import java.util.Scanner;
 
+
 class MethodTest{
 	
 	//속성
