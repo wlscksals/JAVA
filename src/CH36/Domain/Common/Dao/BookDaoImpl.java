@@ -46,7 +46,7 @@ public List<BookDto> select() throws Exception{
 		if(rs!=null) {
 			while(rs.next()) {
 				dto = new BookDto();
-				dto.setBookCode(rs.getInt("bookCode"));
+				dto.setBookCode(rs.getLong("bookCode"));
 				dto.setBookName(rs.getString("bookName"));
 				dto.setPublisher(rs.getString("publisher"));
 				dto.setIsbn(rs.getString("isbn"));
@@ -67,7 +67,7 @@ public List<BookDto> select() throws Exception{
 		if(rs!=null) {
 			rs.next();
 			dto = new BookDto();
-			dto.setBookCode(rs.getInt("bookCode"));
+			dto.setBookCode(rs.getLong("bookCode"));
 			dto.setBookName(rs.getString("bookName"));
 			dto.setPublisher(rs.getString("publisher"));
 			dto.setIsbn(rs.getString("isbn"));

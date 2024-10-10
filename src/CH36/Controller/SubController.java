@@ -1,5 +1,8 @@
 package CH36.Controller;
 
-public class SubController {
+import java.util.Map;
 
+public interface SubController {
+	
+	Map<String,Object> execute ( Map<String,Object>params );
 }

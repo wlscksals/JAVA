@@ -41,11 +41,11 @@ class DaoTests {
 		list.forEach(dto ->System.out.println(dto));
 	}
 	
-	//단권 조회
+	//단권 조회 
 	@Test
 	void BookDaoSelect2() throws Exception{
 		BookDaoImpl dao = BookDaoImpl.getInstance();
-		BookDto dto = dao.select(70000000025697);
+		BookDto dto = dao.select(70000078804947L);
 		System.out.println(dto);
 		
 	}
