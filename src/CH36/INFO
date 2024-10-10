@@ -1,0 +1,31 @@
+1 Persistence Layer
+	- BookDaoImpl
+		- Simgleton Pattern(단일 객체)
+		- DB연결 위한 기본 속성
+		- CRUD함수 작성
+	- BookDaoTests
+		-CTUD Tests
+
+
+2 Presentation Layer
+	- FrontController
+		- map("endPoint", SubController객체)
+		- init() - SubController 객체 초기화
+		- execute() - voew로부터의 내용받아서 SubController 실행
+	- SubController(Interface)
+		- execute - 하위컨트롤러가 재정의하도록 유도
+	- BookController
+		- execute()
+			- 1 파라미터 받기
+			- 2 유효성 체크
+			- 3 서비스 실행
+			- 4 뷰로이동/내용전달
+3 Business Layer (Tx처리/Business유효성 검사....)
+	- BookServiceImple
+		- SingleTon pattern(단일객체)
+		- BookDaoImpl을 연결
+		- Service 함수 작업
+
+
+
+View -> FC -> SC -> Service -> Dao -> Table(DB)
