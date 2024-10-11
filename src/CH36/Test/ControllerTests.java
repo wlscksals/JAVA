@@ -1,12 +1,14 @@
 package CH36.Test;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
 import CH36.Controller.FrontController;
 import CH36.Domain.Common.Dto.BookDto;
+import CH36.Domain.Common.Dto.UserDto;
 
 class ControllerTests {
 
@@ -71,4 +73,26 @@ class ControllerTests {
 		System.out.println("message : " + message);
 		System.out.println("Exception : " + ex);
 	}
+	
+	@Test
+	void UserControllerTest_1() {
+		FrontController fc = new FrontController();
+		Map<String,Object> params = new LinkedHashMap();
+		params.put("endPoint", "/user");
+		params.put("serviceNo", 1);
+		params.put("userDto", new UserDto("bbb","1234","ROLE_USER",false));
+
+		Map<String,Object> result =  fc.execute(params);
+		System.out.println("isSuccess : " + result.get("success"));
+		System.out.println("message : " + result.get("message"));
+		System.out.println("exception : " + result.get("exception"));
+		
+	}
+	
+	
+	
+	
+	
+	
+	
 }
