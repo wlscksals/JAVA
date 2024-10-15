@@ -1,4 +1,4 @@
-package CH36.Controller;
+package CH36Test.Controller;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -7,6 +7,7 @@ public class FrontController {
 	
 	private Map<String,SubController> map = new HashMap();
 	
+
 	public FrontController(){
 		System.out.println("[FC] FrontController()....");
 		init();
@@ -31,6 +32,4 @@ public class FrontController {
 	
 	
 }
-
-
 

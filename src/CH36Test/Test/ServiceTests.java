@@ -1,4 +1,4 @@
-package CH36.Test;
+package CH36Test.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -7,13 +7,14 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 
 import CH36.Domain.Common.Dto.BookDto;
+import CH36.Domain.Common.Service.BookService;
 import CH36.Domain.Common.Service.BookServiceImpl;
 
 class ServiceTests {
 
 	@Test
 	void bookServiceImpl_1() throws Exception{
-		BookServiceImpl service = BookServiceImpl.getInstance();
+		BookService service = BookServiceImpl.getInstance();
 		boolean isSuccess = 
 				service.bookRegistration(new BookDto(1122L,"이것이C언어다","오렌지미디어","121212"));
 		System.out.println("도서등록여부 : "+ isSuccess );
@@ -21,7 +22,7 @@ class ServiceTests {
 	
 	@Test
 	void bookServiceImpl_2() throws Exception{
-		BookServiceImpl service = BookServiceImpl.getInstance();
+		BookService service = BookServiceImpl.getInstance();
 		List<BookDto> list = service.getBooks();
 		list.forEach(el->System.out.println(el));
 	}

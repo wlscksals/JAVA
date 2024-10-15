@@ -1,4 +1,4 @@
-package CH36.Test;
+package CH36Test.Test;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;

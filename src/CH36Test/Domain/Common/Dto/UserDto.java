@@ -1,4 +1,4 @@
-package CH36.Domain.Common.Dto;
+package CH36Test.Domain.Common.Dto;
 
 public class UserDto {
 	private String username;

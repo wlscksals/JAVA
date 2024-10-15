@@ -1,4 +1,4 @@
-package CH36.Controller;
+package CH36Test.Controller;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -34,7 +34,6 @@ public class UserController implements SubController{
 		//파라미터 받기(1:insert,2:update,3:delete,4:select,5:selectAll,6:login,7:logout) 
 		Integer serviceNo =(Integer)params.get("serviceNo");
 		UserDto userDto = (UserDto)params.get("userDto");
-		
 		
 		//뷰전달 변수
 		Map<String, Object> returnValue = new HashMap();
@@ -79,20 +78,6 @@ public class UserController implements SubController{
 					break;
 				case 6 : 	//login
 					System.out.println("[SC] UserController Login...");
-					Integer sessionId = (Integer)params.get("sessionId");
-					//유효성 체크
-					if(!isValid(userDto,sessionId)) {
-						//유효성 체크 실패시 처리
-						returnValue.put("success", false);
-						returnValue.put("message", "로그인 실패");
-						return returnValue;	
-					}
-					//서비스 실행
-					Map<String,Object> value  =userServiceImpl.login(userDto,sessionId);
-					
-					//뷰로이동/or 내용전달(세션ID전달예정)
-					returnValue = value;
-					
 					break;
 				case 7 : 	//logout
 					System.out.println("[SC] UserController Logout...");
@@ -107,11 +92,6 @@ public class UserController implements SubController{
 		
 		return returnValue;
 	}
-	private boolean isValid(UserDto userDto, Integer sessionId) {
-		// TODO Auto-generated method stub
-		return true;
-	}
-
 	//DATA 유효성체크 함수
 	private boolean isValid(UserDto dto) {
 		

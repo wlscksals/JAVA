@@ -1,4 +1,4 @@
-package CH36;
+package CH36Test;
 
 public class Application {
 
