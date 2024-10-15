@@ -92,6 +92,7 @@ public class UserServiceImpl implements UserService {
 				returnValue.put("success", true);
 				returnValue.put("message", "로그인 성공!");
 				returnValue.put("sessionId", dbSessionDto.getSessionId());
+				returnValue.put("role",dbSessionDto.getRole());
 				connectionPool.commitTransaction();
 		}catch(Exception e) {
 			connectionPool.rollbackTransaction();

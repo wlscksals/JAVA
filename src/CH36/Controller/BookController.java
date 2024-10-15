@@ -27,6 +27,7 @@ public class BookController implements SubController {
 	}
 	
 	private BookService bookServiceImpl;
+	
 	public BookController(){
 		try {
 			bookServiceImpl = BookServiceImpl.getInstance();
