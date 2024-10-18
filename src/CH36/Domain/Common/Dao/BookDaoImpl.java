@@ -88,7 +88,6 @@ public class BookDaoImpl implements BookDao {
 		rs = pstmt.executeQuery();
 		BookDto dto=null;
 		if(rs!=null) {
-			
 			if(rs.next()) {
 				dto = new BookDto();
 				dto.setBookCode(rs.getLong("bookCode"));
